@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-    has_many: comments, #relationship with comment model
+    has_many :comments
     validates :title, presence:true,
     length:{minimum:5} 
 end
