@@ -32,6 +32,12 @@ class PostsController < ApplicationController
             render 'edit'
         end
     end
+    def destroy
+        @post=Post.find(params[:id])
+        @post.destroy
+        
+        redirect_to posts_path
+    end
 
     #get all form data and save into private variable
     private def post_params
