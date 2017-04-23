@@ -16,7 +16,7 @@ class PostsController < ApplicationController
         @post=Post.new(post_params)  #Post is the model name
         
         if(@post.save) #save data to db
-            redirect_to @post #then reditect to show page
+            redirect_to @post #then reditect to show page ie append id(getting from show method) after post and make url like posts/1 
         else
             render 'new'
         end
