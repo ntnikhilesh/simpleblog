@@ -21,6 +21,17 @@ class PostsController < ApplicationController
             render 'new'
         end
     end
+    def edit
+        @post=Post.find(params[:id])
+    end
+    def update
+        @post=Post.find(params[:id])
+        if(@post.update(post_params)) #update data to db
+            redirect_to @post #then reditect to show page ie append id(getting from show method) after post and make url like posts/1 
+        else
+            render 'edit'
+        end
+    end
 
     #get all form data and save into private variable
     private def post_params
