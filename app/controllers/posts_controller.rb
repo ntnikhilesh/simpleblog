@@ -2,7 +2,7 @@ class PostsController < ApplicationController
     #def keyword used for defining function
     # @varable name for defining varialble
     def index
-
+        @post=Post.all
     end
      def show
         @post=Post.find(params[:id])
