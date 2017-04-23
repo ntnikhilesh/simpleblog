@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+    http_basic_authenticate_with name:"nikhil",password:"123456",except:[:index,:show]
     #def keyword used for defining function
     # @varable name for defining varialble
     def index
